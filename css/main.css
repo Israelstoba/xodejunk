@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-prim: #31abea;
+  --clr-light: #fff;
+  /* Element spacing */
+  --sp-0: 0.5rem;
+  --sp-1: 1rem;
+  --sp-2: 2rem;
+  --sp-3: 2rem;
+  --sp-4: 4rem;
+  --sp-5: 5rem;
+  /* Element  Border Radius */
+  --br-0: 5px;
+  --br-1: 10px;
+  --br-2: 15px;
+  --br-3: 20px;
+  --br-4: 25px;
+  --br-5: 30px;
+  --br-50: 50%;
+  /* Element  Shadow */
+  --bs-b: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+  --bs-xy: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-col-1,
+.flex-col-2,
+.flex-col-3,
+.flex-col-4 {
+  min-width: 250px;
+  padding: var(--sp-1);
+  flex-grow: 1;
+}
+
+.flex-col-1 {
+  flex-basis: 100%;
+  max-width: 700px;
+}
+
+.flex-col-2 {
+  flex-basis: 50%;
+  max-width: 500px;
+}
+
+.flex-col-3 {
+  flex-basis: 33.33%;
+}
+
+.flex-col-4 {
+  flex-basis: 25%;
+}
+
+.fluid-con {
+  width: 100%;
+}
+
+.con-lg {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.con-md {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.sections {
+  padding-block: var(--sp-3);
+  padding-inline: var(--sp-0);
+}
+
+.title-lg {
+  font-weight: 700;
+  font-size: clamp(1.6rem, 10vw, 3rem);
+  margin-bottom: var(--sp-2);
+  max-width: 700px;
+  text-align: left;
+}
+
+.btn-con {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.btn {
+  padding-block: var(--sp-0);
+  padding-inline: var(--sp-1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: var(--br-5);
+  box-shadow: var(--bs-xy);
+}
+
+.btn-prim {
+  background-color: var(--clr-prim);
+}
+
+#debugCSSInfoBar {
+  z-index: 2000000;
+}
+
+#hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  min-height: 600px;
+  padding-top: var(--sp-5);
+  background-image: url(../assets/hero_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hero-section .hero-con {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(99, 226, 255, 0.3);
+  max-width: 800px;
+  padding: var(--sp-1);
+  border-radius: var(--br-2);
+}
+#hero-section .hero-con .indicator-con {
+  margin: 0 auto 6rem;
+  position: relative;
+}
+#hero-section .hero-con .indicator-con .indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  color: var(--clr-light);
+  animation: indicatorAnim 3s linear infinite;
+}
+@keyframes indicatorAnim {
+  0% {
+    top: 15px;
+    color: #0088cc;
+  }
+  50% {
+    top: 0;
+    color: #25d366;
+  }
+  100% {
+    top: 15px;
+    color: #c32aa3;
+  }
+}
+#hero-section .hero-con .title-lg {
+  color: var(--clr-light);
+  text-align: center;
+}
+#hero-section .hero-con .btn-con {
+  max-width: 400px;
+  margin-inline: auto;
+}
+#hero-section .hero-con .btn-con .btn:nth-child(1) {
+  background-color: #0088cc;
+}
+#hero-section .hero-con .btn-con .btn:nth-child(1):hover {
+  background-color: #0072ac;
+}
+#hero-section .hero-con .btn-con .btn:nth-child(2) {
+  background-color: #25d366;
+}
+#hero-section .hero-con .btn-con .btn:nth-child(2):hover {
+  background-color: #0ba343;
+}
+#hero-section .hero-con .btn-con .btn:nth-child(3) {
+  background-color: #c32aa3;
+}
+#hero-section .hero-con .btn-con .btn:nth-child(3):hover {
+  background-color: #9d0f7e;
+}/*# sourceMappingURL=main.css.map */
