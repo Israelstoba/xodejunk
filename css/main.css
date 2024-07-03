@@ -102,6 +102,11 @@ a {
   text-align: left;
 }
 
+.section-title {
+  font-size: clamp(1.6rem, 10vw, 3rem);
+  text-align: center;
+}
+
 .btn-con {
   width: 100%;
   text-align: center;
@@ -180,7 +185,7 @@ a {
   text-align: center;
 }
 #hero-section .hero-con .btn-con {
-  max-width: 400px;
+  max-width: 500px;
   margin-inline: auto;
 }
 #hero-section .hero-con .btn-con .btn:nth-child(1) {
@@ -200,4 +205,43 @@ a {
 }
 #hero-section .hero-con .btn-con .btn:nth-child(3):hover {
   background-color: #9d0f7e;
+}
+
+#why-section .flex-col-2 {
+  margin-inline: auto;
+}
+#why-section .why-img-con {
+  position: relative;
+  overflow: hidden;
+  max-width: 450px;
+  margin-inline: auto;
+}
+#why-section .why-img-con .why-rocket {
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(45deg);
+  animation: rocketAnim 3s linear infinite;
+}
+@keyframes rocketAnim {
+  0% {
+    bottom: 50px;
+    left: 50px;
+  }
+  50% {
+    bottom: 200px;
+    left: 200px;
+    opacity: 0.5;
+  }
+  75% {
+    bottom: 300px;
+    left: 300px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 300px;
+    left: 300px;
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
