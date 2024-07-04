@@ -7,7 +7,12 @@
 
 :root {
   --clr-prim: #31abea;
+  --clr-sec-100: #9c3599;
+  --clr-sec-200: #c141bd;
+  --clr-sec-300: #fb85f7;
   --clr-light: #fff;
+  --clr-grey: #5b5b5b;
+  --clr-dark: #000;
   /* Element spacing */
   --sp-0: 0.5rem;
   --sp-1: 1rem;
@@ -90,8 +95,21 @@ a {
 }
 
 .sections {
-  padding-block: var(--sp-3);
+  padding-block: var(--sp-4);
   padding-inline: var(--sp-0);
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 10vw, 3rem);
+  text-align: center;
+  margin-block: var(--sp-2);
+  color: var(--clr-sec-100);
+}
+
+.section-txt {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--clr-grey);
 }
 
 .title-lg {
@@ -102,19 +120,42 @@ a {
   text-align: left;
 }
 
-.section-title {
-  font-size: clamp(1.6rem, 10vw, 3rem);
-  text-align: center;
+.title-sm {
+  font-weight: 700;
+  font-size: clamp(1.3rem, 7vw, 3rem);
+  color: var(--clr-sec-100);
+  margin-bottom: var(--sp-2);
+  max-width: 700px;
+  text-align: left;
 }
 
 .btn-con {
-  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: var(--sp-1);
+}
+.btn-con .btn:nth-child(1) {
+  background-color: #0088cc;
+}
+.btn-con .btn:nth-child(1):hover {
+  background-color: #0072ac;
+}
+.btn-con .btn:nth-child(2) {
+  background-color: #25d366;
+}
+.btn-con .btn:nth-child(2):hover {
+  background-color: #0ba343;
+}
+.btn-con .btn:nth-child(3) {
+  background-color: #c32aa3;
+}
+.btn-con .btn:nth-child(3):hover {
+  background-color: #9d0f7e;
 }
 
 .btn {
@@ -147,12 +188,12 @@ a {
   background-repeat: no-repeat;
 }
 #hero-section .hero-con {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: var(--sp-3);
+  border-radius: var(--br-2);
   border: 1px solid rgba(99, 226, 255, 0.3);
   max-width: 800px;
-  padding: var(--sp-1);
-  border-radius: var(--br-2);
 }
 #hero-section .hero-con .indicator-con {
   margin: 0 auto 6rem;
@@ -184,64 +225,74 @@ a {
   color: var(--clr-light);
   text-align: center;
 }
-#hero-section .hero-con .btn-con {
-  max-width: 500px;
-  margin-inline: auto;
-}
-#hero-section .hero-con .btn-con .btn:nth-child(1) {
-  background-color: #0088cc;
-}
-#hero-section .hero-con .btn-con .btn:nth-child(1):hover {
-  background-color: #0072ac;
-}
-#hero-section .hero-con .btn-con .btn:nth-child(2) {
-  background-color: #25d366;
-}
-#hero-section .hero-con .btn-con .btn:nth-child(2):hover {
-  background-color: #0ba343;
-}
-#hero-section .hero-con .btn-con .btn:nth-child(3) {
-  background-color: #c32aa3;
-}
-#hero-section .hero-con .btn-con .btn:nth-child(3):hover {
-  background-color: #9d0f7e;
-}
 
-#why-section .flex-col-2 {
+#why-section .flex-row {
+  overflow: hidden;
+}
+#why-section .flex-row .flex-col-2 {
   margin-inline: auto;
 }
 #why-section .why-img-con {
   position: relative;
-  overflow: hidden;
   max-width: 450px;
   margin-inline: auto;
+  overflow: hidden;
 }
 #why-section .why-img-con .why-rocket {
   width: 300px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -100px;
+  left: -100px;
   transform: rotate(45deg);
   animation: rocketAnim 3s linear infinite;
 }
 @keyframes rocketAnim {
   0% {
-    bottom: 50px;
-    left: 50px;
+    bottom: 0;
+    left: 0;
   }
   50% {
-    bottom: 200px;
-    left: 200px;
+    bottom: 100px;
+    left: 100px;
     opacity: 0.5;
   }
   75% {
-    bottom: 300px;
-    left: 300px;
-    opacity: 0.5;
-  }
-  100% {
-    bottom: 300px;
-    left: 300px;
+    bottom: 225px;
+    left: 225px;
     opacity: 0;
   }
+  100% {
+    bottom: 225px;
+    left: 225px;
+    opacity: 0;
+  }
+}
+
+#service-section {
+  width: 100%;
+  text-align: center;
+  color: var(--clr-light);
+  background: #680e7b;
+  background: linear-gradient(to left, #333399, #680e7b);
+}
+#service-section .service-icons {
+  width: 60px;
+}
+#service-section .service-title {
+  font-size: 1.6rem;
+  margin-block: var(--sp-1);
+  color: var(--clr-sec-300);
+}
+#service-section .section-txt {
+  color: var(--clr-light);
+}
+#service-section .btn-con {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: var(--sp-3);
+  border-radius: var(--br-2);
+  border: 1px solid rgba(99, 226, 255, 0.3);
+  margin-top: var(--sp-3);
+  min-height: 100px;
+  max-width: 600px;
 }/*# sourceMappingURL=main.css.map */
