@@ -139,22 +139,22 @@ a {
   align-items: center;
   gap: var(--sp-1);
 }
-.btn-con .btn:nth-child(1) {
+.btn-con .telegram {
   background-color: #0088cc;
 }
-.btn-con .btn:nth-child(1):hover {
+.btn-con .telegram:hover {
   background-color: #0072ac;
 }
-.btn-con .btn:nth-child(2) {
+.btn-con .whatsapp {
   background-color: #25d366;
 }
-.btn-con .btn:nth-child(2):hover {
+.btn-con .whatsapp:hover {
   background-color: #0ba343;
 }
-.btn-con .btn:nth-child(3) {
+.btn-con .instagram {
   background-color: #c32aa3;
 }
-.btn-con .btn:nth-child(3):hover {
+.btn-con .instagram:hover {
   background-color: #9d0f7e;
 }
 
